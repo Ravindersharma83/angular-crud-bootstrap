@@ -2,6 +2,10 @@
     <h1 class="text-danger">Student's Record</h1>
     <!-- <button class="btn btn-primary m-1">Add Student</button> -->
     <div>
+      <div *ngIf="isLoading; else elseTableBlock">
+        <app-loader></app-loader>
+      </div>
+      <ng-template #elseTableBlock>
         <table class="table">
             <thead>
               <tr>
@@ -14,21 +18,22 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>name</td>
-                <td>course</td>
-                <td>email</td>
-                <td>phone</td>
+              <tr *ngFor="let student of students">
+                <th scope="row">{{student.id}}</th>
+                <td>{{student.name}}</td>
+                <td>{{student.course}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.phone}}</td>
                 <td>
                     <div>
-                        <a href="" class="btn btn-danger m-1">Delete</a>
-                        <a href="" class="btn btn-warning">Edit</a>
+                        <!-- <a routerLink="/students/{{student.id}}/edit" class="btn btn-warning mx-2">Edit</a>
+                        <a href="" class="btn btn-danger">Delete</a> -->
                     </div>
                 </td>
               </tr>
             </tbody>
           </table>
+      </ng-template>
     </div>
 
 </div>
