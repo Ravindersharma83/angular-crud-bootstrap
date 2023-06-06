@@ -23,4 +23,16 @@ export class StudentService {
   getStudents(){
     return this.httpClient.get<StudentResponse[]>(`http://localhost:3000/students`);
   }
+
+  getStudent(studentId : string){
+    return this.httpClient.get<StudentResponse>(`http://localhost:3000/students/${studentId}`);
+  }
+
+  updateStudent(inputData : object , studentId : string){
+    return this.httpClient.put(`http://localhost:3000/students/${studentId}`,inputData);
+  }
+
+  destroyStudent(studentId: Number){
+    return this.httpClient.delete(`http://localhost:3000/students/${studentId}`);
+  }
 }

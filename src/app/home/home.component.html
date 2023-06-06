@@ -26,8 +26,8 @@
                 <td>{{student.phone}}</td>
                 <td>
                     <div>
-                        <!-- <a routerLink="/students/{{student.id}}/edit" class="btn btn-warning mx-2">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a> -->
+                        <a routerLink="/edit/{{student.id}}" class="btn btn-warning mx-2">Edit</a>
+                        <button type="button" (click)="deleteStudent($event,student.id)" class="btn btn-danger">Delete</button>
                     </div>
                 </td>
               </tr>

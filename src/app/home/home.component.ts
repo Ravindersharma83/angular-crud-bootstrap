@@ -28,4 +28,21 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+
+  deleteStudent(event : any, studentId:number){
+    if(confirm('Are you sure you want to delete this data ?'))
+    {
+      event.target.innerText = "Deleting...";
+
+      this.studentService.destroyStudent(studentId).subscribe({
+        next:(res) =>{
+          this.getStudentLists();
+          alert("Deleted");
+        },
+        error:(err:any)=>{
+          console.log(err);
+        }
+      })
+    }
+  }
 }

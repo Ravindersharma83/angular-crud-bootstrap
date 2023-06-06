@@ -8,11 +8,11 @@
       "phone": 9988987890
     },
     {
-      "id": 2,
-      "name": "ravinder",
+      "name": "ravinder sharma",
       "course": "Angular",
       "email": "ravinder@gmail.com",
-      "phone": 9877676689
+      "phone": 9877676689,
+      "id": 2
     },
     {
       "name": "mahi",
@@ -20,13 +20,6 @@
       "email": "mahi@gmail.com",
       "phone": "8877998900",
       "id": 3
-    },
-    {
-      "name": "test",
-      "course": "test",
-      "email": "test@gmail.com",
-      "phone": "9888889989",
-      "id": 4
     }
   ]
 }
