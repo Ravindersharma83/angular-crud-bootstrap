@@ -10,7 +10,7 @@
     {
       "name": "ravinder sharma",
       "course": "Angular",
-      "email": "ravinder@gmail.com",
+      "email": "mr.ravi@gmail.com",
       "phone": 9877676689,
       "id": 2
     },
@@ -20,6 +20,41 @@
       "email": "mahi@gmail.com",
       "phone": "8877998900",
       "id": 3
+    },
+    {
+      "id": 4,
+      "name": "rohit",
+      "course": "typicode",
+      "email": "rohit@gmail.com",
+      "phone": 887766567
+    },
+    {
+      "name": "virat",
+      "course": "Angular",
+      "email": "virat@gmail.com",
+      "phone": 9889009900,
+      "id": 5
+    },
+    {
+      "name": "ram",
+      "course": "react",
+      "email": "ram@gmail.com",
+      "phone": "8877997770",
+      "id": 6
+    },
+    {
+      "name": "ram",
+      "course": "Angular",
+      "email": "ram@gmail.com",
+      "phone": "8877997770",
+      "id": 7
+    },
+    {
+      "name": "gaurav",
+      "course": "laravel",
+      "email": "gaurav@gmail.com",
+      "phone": "8879988900",
+      "id": 8
     }
   ]
 }
