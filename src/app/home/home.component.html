@@ -1,14 +1,6 @@
 <div class="container m-4" style="position: absolute; top:50px">
     <h1 class="text-danger">Student's Record</h1>
 
-    <!-- <input type="text" name="search" placeholder="search" [(ngModel)]="search" class="form-control w-25" style="border : 1px solid black" (keyup)="filterData()" /><br>
-    <select [(ngModel)]="selectedCourse" (change)="filterData()" class="form-select w-25" style="border : 1px solid black">
-      <option value="">All Courses</option>
-      <option value="typicode">typicode</option>
-      <option value="angular">Angular</option>
-      <option value="react">React</option>
-    </select> -->
-
     <form #filterForm="ngForm" [formGroup]="formGroup">
       <div class="row">
         <div class="col-6">
@@ -32,8 +24,7 @@
       </div>
       </div>
     </form>
-
-    
+ 
     <div>
       <div *ngIf="isLoading; else elseTableBlock">
         <app-loader></app-loader>

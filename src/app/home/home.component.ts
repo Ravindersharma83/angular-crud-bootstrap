@@ -17,8 +17,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   students !: StudentResponse[];
   isLoading : boolean = false;
-  // search : string = '';
-  // selectedCourse : string = '';
+
   filteredStudents: any[] = [];
 
   formGroup: FormGroup = new FormGroup({
@@ -30,8 +29,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.getStudentLists();
     this.formGroup.valueChanges.subscribe((changes) => {
       this.filterData()
-      this.cdr.detectChanges();
-      console.log(changes)
+      // this.cdr.detectChanges();
+      // console.log(changes)
     })
   }
 
@@ -63,41 +62,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
           return shouldReturnData;
         })
         this.students = this.filteredStudents;
-        this.cdr.detectChanges();
+        // this.cdr.detectChanges();
       },
       error:(err:any)=>{
         console.log(err);
       }
     });
   }
-
-  // filterData(){
-    // this.studentService.getStudents().subscribe({
-    //   next:(res) =>{
-    //     let filtered = this.students;
-        
-    //     if (this.search) {
-    //       const searchText = this.search.toLowerCase();
-    //       filtered = filtered.filter(student =>
-    //         student.name.toLowerCase().includes(searchText) ||
-    //         student.email.toLowerCase().includes(searchText) ||
-    //         student.phone.toString().includes(searchText)
-    //       );
-    //     }
-    
-    //     if (this.selectedCourse) {
-    //       filtered = filtered.filter(student =>
-    //         student.course.toLowerCase() === this.selectedCourse.toLowerCase()
-    //       );
-    //     }
-    //     return this.students = filtered;
-    //   },
-    //   error:(err:any)=>{
-    //     console.log(err);
-    //   }
-    // });
-  // }
-
 
   getStudentLists(){
     this.isLoading = true;
